@@ -70,7 +70,7 @@ FrigidairePlatform.prototype = {
         debug("Got Device List, setting up each accessory");
         debug(result);
         result.forEach(function(device) {
-          console.log('craeting accessory for AC unit labeled : '+device.nickname);
+          console.log('creating accessory for AC unit labeled : '+device.nickname);
           debug(device);
           airConditioners.push(new FrigidaireAirConditionerAccessory(device, self.AC, self.log, self.pollingInterval));
           self.AC.getTelem(device.sn, function (err, result) { });
